@@ -7,8 +7,8 @@ use crate::kubis::Kubis;
 #[tokio::main]
 async fn main() -> Result<(), reqwest::Error> {
     let k = Kubis::new();
-    println!("{}", k.get_health().await);
-
+    //println!("{}", k.get_health().await);
+    println!("{:?}", k.get_all_pod_names().await);
 
     Ok(())
 }
